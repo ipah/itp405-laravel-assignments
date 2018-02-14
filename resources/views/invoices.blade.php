@@ -15,6 +15,7 @@
       @foreach($invoices as $invoice)
         <tr>
           <td>{{$invoice->InvoiceDate}}</td>
+          <td>{{$invoice->Customer->LastName}}</td>
           <td>{{$invoice->LastName}}</td>
           <td>{{$invoice->FirstName}}</td>
           <td>
