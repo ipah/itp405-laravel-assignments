@@ -21,13 +21,13 @@
 
 				<tr>
 					<td>
-						{{$track->track}}
+						{{$track->Name}}
 					</td>
 					<td>
-						{{$track->artist}}
+						{{$track->album->artist->Name}}
 					</td>
 					<td>
-						{{$track->album}}
+						{{$track->album->Title}}
 					</td>
 					<td>
 						{{$track->UnitPrice}}

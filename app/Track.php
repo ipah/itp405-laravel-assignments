@@ -12,4 +12,8 @@ class Track extends Model
     public function Album(){
     	return $this->belongsTo('App\Album','AlbumId');
     }
+
+    // public function Artist(){
+    // 	eturn $this->belongsTo('App\Artist','ArtistId');
+    // }
 }
