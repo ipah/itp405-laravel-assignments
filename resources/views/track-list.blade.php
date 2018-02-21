@@ -11,6 +11,7 @@
 				<th>Song Name</th>
 				<th>Artist</th>
 				<th>Album</th>
+				<th>Media Type</th>
 				<th>Price</th>
 			</tr>
 			
@@ -28,6 +29,9 @@
 					</td>
 					<td>
 						{{$track->album->Title}}
+					</td>
+					<td>
+						{{$track->mediatype->Name}}
 					</td>
 					<td>
 						{{$track->UnitPrice}}
