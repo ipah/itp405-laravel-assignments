@@ -12,4 +12,8 @@ class Album extends Model
     public function Artist(){
     	return $this->belongsTo('App\Artist','ArtistId');
     }
+
+    public function Review(){
+    	return $this->hasMany('App\Review','id');
+    }
 }
