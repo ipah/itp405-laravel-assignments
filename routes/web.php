@@ -6,10 +6,12 @@
 
 // Route::get('/signup', 'SignupController@index'); //shows view for user to sign up
 // Route::post('/signup', 'SignupController@signup');//processes user sign up
-// Route::get('/login', 'LoginController@index');
-// Route::post('/login', 'LoginController@login');
+Route::get('/login', 'LoginController@index');
+Route::post('/login', 'LoginController@login');
 
-// Route::get('/logout', 'LoginController@logout');
+Route::get('/logout', 'LoginController@logout');
+
+Route::get('/maintenance', 'MaintenanceModeController@index');
 
 
 
@@ -35,6 +37,8 @@
 		Route::get('/profile', 'AdminController@index');
 		Route::get('/invoices', 'InvoicesController@index');
 		Route::get('/invoices/{id}', 'InvoicesController@show');
+		Route::get('/settings', 'SettingsController@index');
+		Route::post('/settings', 'SettingsController@update');
 		Route::get('/phpinfo', function() {
 		  echo phpinfo();
 		});
@@ -62,8 +66,7 @@
 
 	});
 
-	Route::get('/genres','GenresController@index');
-		Route::get('/tracks', 'TracksController@index');
+	
 
 
 
