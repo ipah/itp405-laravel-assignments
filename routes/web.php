@@ -76,6 +76,7 @@ Route::get('/maintenance', 'MaintenanceModeController@index');
 
 	Route::get('/login/facebook', 'LoginController@redirectToFacebook');
 	Route::get('/login/facebook/callback', 'LoginController@handleFacebookCallback');
+	Route::post('/fbpost', 'FacebookController@store')
 	
 
 

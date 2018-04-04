@@ -44,7 +44,7 @@ class LoginController extends Controller
 
     public function handleTwitterCallback(){
         $twitterUser = Socialite::driver('twitter')->user();
-
+        dd($twitterUser);
         $user = User::where('email','=',$twitterUser->getEmail())->first();
         if(!$user){
             $user = new User();
