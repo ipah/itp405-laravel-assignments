@@ -26,20 +26,20 @@ class LoginController extends Controller
 
     public function handleFacebookCallback(){
         $fbUser = Socialite::driver('facebook')->user();
-        //dd($fbUser);
-        $user = User::where('email','=',$fbUser->getEmail())->first();
-        
-        if(!$user){
-            $user = new User();
-            $user->name = $fbUser->getName();
-            $user->email = $fbUser->getEmail();
-        }
+        dd($fbUser);
+        // $user = User::where('email','=',$fbUser->getEmail())->first();
+        // dd($user);
+        // if(!$user){
+        //     $user = new User();
+        //     $user->name = $fbUser->getName();
+        //     $user->email = $fbUser->getEmail();
+        // }
 
-        $user->facebook_token = $fbUser->token;
-        $user->facebook_token_secret = $fbUser->tokenSecret;
-        $user->save();
-        Auth::login($user);
-        return redirect('/profile');
+        // $user->facebook_token = $fbUser->token;
+        // $user->facebook_token_secret = $fbUser->tokenSecret;
+        // $user->save();
+        // Auth::login($user);
+        // return redirect('/profile');
     }
 
     public function handleTwitterCallback(){
