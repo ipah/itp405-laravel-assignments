@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Auth;
+//use Abraham\TwitterOAuth\TwitterOAuth;
 class FacebookController extends Controller
 {
     public function store(Request $request){
