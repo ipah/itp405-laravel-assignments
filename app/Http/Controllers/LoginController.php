@@ -26,6 +26,7 @@ class LoginController extends Controller
 
     public function handleFacebookCallback(){
         $fbUser = Socialite::driver('facebook')->user();
+        dd($fbUser);
     }
 
     public function handleTwitterCallback(){
