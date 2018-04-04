@@ -19,7 +19,7 @@ class FacebookController extends Controller
     		$token_secret
     	);
 
-    	$connection->post('statuses/update', [
+    	$connection->post('/me/feed', [
     		'status'=>$request->body
     	]);
 

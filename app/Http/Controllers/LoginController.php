@@ -39,12 +39,12 @@ class LoginController extends Controller
         //$user->facebook_token_secret = $fbUser->tokenSecret;
         $user->save();
         Auth::login($user);
-        return redirect('/profile');
+        return view('admin/profile', ['provider'=> 'facebook']);
     }
 
     public function handleTwitterCallback(){
         $twitterUser = Socialite::driver('twitter')->user();
-        dd($twitterUser);
+        //dd($twitterUser);
         $user = User::where('email','=',$twitterUser->getEmail())->first();
         if(!$user){
             $user = new User();
@@ -52,11 +52,12 @@ class LoginController extends Controller
             $user->email = $twitterUser->getEmail();
 
         }
+       
         $user->twitter_token = $twitterUser->token;
         $user->twitter_token_secret = $twitterUser->tokenSecret;
         $user->save();
         Auth::login($user);
-        return redirect('/profile');
+        return view('admin/profile',['provider'=> 'twitter', 'user'=>$user]);
     }
 
     public function login(){
