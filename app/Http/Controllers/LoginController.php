@@ -20,6 +20,14 @@ class LoginController extends Controller
 
     }
 
+    public function redirectToFacebook(){
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function handleFacebookCallback(){
+        $fbUser = Socialite::driver('facebook')->user();
+    }
+
     public function handleTwitterCallback(){
         $twitterUser = Socialite::driver('twitter')->user();
 

@@ -73,6 +73,9 @@ Route::get('/maintenance', 'MaintenanceModeController@index');
 	Route::get('/login/twitter', 'LoginController@redirectToTwitter');
 	Route::get('/login/twitter/callback', 'LoginController@handleTwitterCallback');
 	Route::post('/tweets', 'TwitterController@store');
+
+	Route::get('/login/facebook', 'LoginController@redirectToFacebook');
+	Route::get('/login/facebook/callback', 'LoginController@handleFacebookCallback');
 	
 
 

@@ -19,5 +19,6 @@
 </form>
 <div>
     <a href="/login/twitter" class="mt-2">Login with Twitter!</a>
+    <a href="/login/facebook">Login with Facebook!</a>
 </div>
 @endsection
