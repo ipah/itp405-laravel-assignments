@@ -400,6 +400,7 @@ class ComposerStaticInit3aae95c8ee18f0d4bf6f2c96942c630e
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FacebookController' => __DIR__ . '/../..' . '/app/Http/Controllers/FacebookController.php',
         'App\\Http\\Controllers\\GenresController' => __DIR__ . '/../..' . '/app/Http/Controllers/GenresController.php',
         'App\\Http\\Controllers\\InvoicesController' => __DIR__ . '/../..' . '/app/Http/Controllers/InvoicesController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
