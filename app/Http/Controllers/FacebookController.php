@@ -22,6 +22,6 @@ class FacebookController extends Controller
     		'status'=>$request->body
     	]);
 
-    	return redirect('/profile', ['user'=>$user, 'provider'=>'facebook']);
+    	return view('/profile', ['user'=>$user, 'provider'=>'facebook']);
     }
 }
