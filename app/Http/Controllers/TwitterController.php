@@ -26,6 +26,6 @@ class TwitterController extends Controller
     		'status'=>$request->body
     	]);
 
-    	return redirect('/profile');
+    	return redirect('/profile', ['user'=>$user, 'provider'=>'twitter']);
     }
 }
