@@ -26,6 +26,6 @@ class TwitterController extends Controller
     		'status'=>$request->body
     	]);
 
-    	return view('/profile', ['user'=>$user, 'provider'=>'twitter']);
+    	return view('admin/profile', ['user'=>$user, 'provider'=>'twitter']);
     }
 }
