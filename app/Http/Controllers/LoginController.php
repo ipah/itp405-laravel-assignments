@@ -27,7 +27,8 @@ class LoginController extends Controller
     public function handleFacebookCallback(){
         $fbUser = Socialite::driver('facebook')->user();
         //dd($fbUser);
-        $user = User::where('email','=',$fbUser->getEmail()->first());
+        $user = User::where('email','=',$fbUser->getEmail())->first();
+        
         if(!$user){
             $user = new User();
             $user->name = $fbUser->getName();
