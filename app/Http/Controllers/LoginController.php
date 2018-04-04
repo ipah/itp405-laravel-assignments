@@ -28,15 +28,15 @@ class LoginController extends Controller
         $fbUser = Socialite::driver('facebook')->user();
         //dd($fbUser->getEmail());
         $user = User::where('email','=',$fbUser->getEmail())->first();
-        dd($fbUser);
-        // if(!$user){
-        //     $user = new User();
-        //     $user->name = $fbUser->getName();
-        //     $user->email = $fbUser->getEmail();
-        // }
+        //dd($fbUser);
+        if(!$user){
+            $user = new User();
+            $user->name = $fbUser->getName();
+            $user->email = $fbUser->getEmail();
+        }
 
         $user->facebook_token = $fbUser->token;
-        $user->facebook_token_secret = $fbUser->tokenSecret;
+        //$user->facebook_token_secret = $fbUser->tokenSecret;
         $user->save();
         Auth::login($user);
         return redirect('/profile');
