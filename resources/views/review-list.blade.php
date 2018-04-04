@@ -4,7 +4,7 @@
 
 
 @section('content')
-	<a href="/albums/{{$album->AlbumId}}/reviews/new">Write Review</a>
+	<a class="mt-3" href="/albums/{{$album->AlbumId}}/reviews/new">Write Review</a>
 	<table class="table">
 		<thead>
 			<tr>

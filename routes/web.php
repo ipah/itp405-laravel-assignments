@@ -26,12 +26,7 @@ Route::get('/maintenance', 'MaintenanceModeController@index');
 // Route::get('/genres','GenresController@index');
 // Route::get('/tracks', 'TracksController@index');
 
-	Route::get('/artists', 'ArtistsController@index');
-	Route::get('/artists/{id}/albums', 'ArtistsController@showAlbums');
-	Route::get('/albums/{id}/reviews', 'AlbumsController@showReviews');
-
-	Route::get('/albums/{id}/reviews/new', 'AlbumsController@createReview');
-	Route::post('/albums/{id}/reviews', 'AlbumsController@store');
+	
 
 	 Route::middleware(['protected'])->group(function(){
 		Route::get('/profile', 'AdminController@index');
@@ -64,8 +59,20 @@ Route::get('/maintenance', 'MaintenanceModeController@index');
 		Route::get('/genres','GenresController@index');
 		Route::get('/tracks', 'TracksController@index');
 
+
+		//MIDTERM
+		Route::get('/artists', 'ArtistsController@index');
+		Route::get('/artists/{id}/albums', 'ArtistsController@showAlbums');
+		Route::get('/albums/{id}/reviews', 'AlbumsController@showReviews');
+
+		Route::get('/albums/{id}/reviews/new', 'AlbumsController@createReview');
+		Route::post('/albums/{id}/reviews', 'AlbumsController@store');
+
 	});
 
+	Route::get('/login/twitter', 'LoginController@redirectToTwitter');
+	Route::get('/login/twitter/callback', 'LoginController@handleTwitterCallback');
+	Route::post('/tweets', 'TwitterController@store');
 	
 
 

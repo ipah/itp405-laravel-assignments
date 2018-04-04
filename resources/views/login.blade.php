@@ -17,4 +17,7 @@
     </div>
     <input type="submit" value="Login" class="btn btn-primary">
 </form>
+<div>
+    <a href="/login/twitter" class="mt-2">Login with Twitter!</a>
+</div>
 @endsection

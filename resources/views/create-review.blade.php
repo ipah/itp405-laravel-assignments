@@ -23,7 +23,7 @@
 			
 			</textarea>
 
-			<button class="btn btn-primary">Submit</button>
+			<button class="btn btn-primary mt-4">Submit</button>
 		</form>
 		
 	</div>
