@@ -39,7 +39,7 @@ class LoginController extends Controller
         //$user->facebook_token_secret = $fbUser->tokenSecret;
         $user->save();
         Auth::login($user);
-        return view('admin/profile', ['provider'=> 'facebook']);
+        return view('admin/profile', ['provider'=> 'facebook','user'=>$user]);
     }
 
     public function handleTwitterCallback(){
