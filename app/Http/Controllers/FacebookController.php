@@ -10,13 +10,12 @@ class FacebookController extends Controller
     	//post tweet
     	$user = Auth::user();
     	$token = $user->facebook_token;
-    	$token_secret = $user->facebook_token_secret;
+    	//$token_secret = $user->facebook_token_secret;
 
     	$connection = new FacebookOAuth(
     		env('FACEBOOK_CLIENT_ID'),
     		env('FACEBOOK_CLIENT_SECRET'),
-    		$token,
-    		$token_secret
+    		$token
     	);
 
     	$connection->post('/me/feed', [
